@@ -1,112 +1,89 @@
-## Minder
+# Minder
 
-A memory support app for short-term memory loss individuals, using video recording and transcription for personalized memory aids. Reminds and revisit crucial moments effortlessly."
+**Minder** is a mobile application designed to support individuals experiencing short-term memory loss by capturing, transcribing, and revisiting meaningful moments. The app allows users to record conversations and events, automatically transcribe them using AI-powered speech recognition, and securely store them for later reference.
 
-## Table of Contents
-- [Getting Started](#getting-started)
-  - [Prerequisites](#prerequisites)
-  - [Installation](#installation)
-- [Usage](#usage)
-- [Contributing](#contributing)
-- [Development](#development)
-- [License](#license)
+The goal of Minder is to help users maintain continuity in their daily lives by providing an easy way to revisit important conversations and experiences.
 
-# Getting Started
+---
 
-Before you can run and use this Flutter app, make sure you have the following software and tools installed.
+## Key Features
+
+- **Video and audio recording** to capture important moments  
+- **AI-powered transcription** using speech-to-text services  
+- **Conversation analysis** to extract useful context from recordings  
+- **Cloud storage** for secure access to recordings and transcripts  
+- **Cross-platform mobile application** built with Flutter  
+
+---
+
+## Technology Stack
+
+### Frontend
+- Flutter  
+- Dart  
+
+### AI / APIs
+- OpenAI APIs for conversation analysis  
+- Whisper speech-to-text transcription  
+
+### Cloud
+- AWS Amplify  
+- AWS cloud storage  
+
+### Development Tools
+- Visual Studio Code  
+- GitHub version control  
+
+---
+
+## Architecture Overview
+
+1. The user records a conversation or important moment through the mobile application.  
+2. The recording is processed and sent to **AI transcription services**.  
+3. The transcription is analyzed to extract meaningful information.  
+4. The recording and transcript are stored securely in **AWS cloud storage**.  
+5. Users can later search, review, and revisit their recorded moments.
+
+---
+
+## Project Purpose
+
+Minder was developed as a collaborative academic project focused on exploring how **AI, cloud services, and mobile applications** can be combined to build assistive technology for individuals experiencing memory challenges.
+
+The project demonstrates the integration of **mobile development, AI services, and cloud infrastructure** to deliver a practical and impactful solution.
+
+---
+
+## Getting Started
 
 ### Prerequisites
-List any software or tools that users need to install before using your app. Include links to their official documentation.
 
-1. **Visual Studio Code (VS Code):**
-   - We recommend using Visual Studio Code as the integrated development environment (IDE) for working with Flutter.
-   - [Download Visual Studio Code](https://code.visualstudio.com/)
+Before running the application, make sure you have the following installed:
 
-2. **Flutter SDK:**
-   - The app is built using Dart with Flutter. Make sure you have Flutter SDK installed.
-   - [Flutter Installation Guide](https://flutter.dev/docs/get-started/install)
+1. **Visual Studio Code (VS Code)**  
+   Recommended IDE for Flutter development  
+   https://code.visualstudio.com/
 
-3. **Dart SDK:**
-   - Dart is the programming language used with Flutter. It is included with the Flutter SDK, so you don't need to install it separately.
-   - [Dart Documentation](https://dart.dev/)
+2. **Flutter SDK**  
+   https://flutter.dev/docs/get-started/install
 
-4. **External APIs:**
-   - The app utilizes external APIs for conversation analysis (Chat GPT) and transcription (Wispher).
-     - [Chat GPT Documentation](https://chatgpt.com/documentation)
-     - [Wispher API Documentation](https://wispher.io/api-docs/)
+3. **Dart SDK**  
+   Included with Flutter  
+   https://dart.dev/
 
-5. **AWS Account:**
-   - For cloud-based storage, we use AWS (Amazon Web Services). You'll need an AWS account to set up and configure cloud storage functionalities.
-     - [AWS Documentation](https://aws.amazon.com/getting-started/)
+4. **AWS Account**  
+   Required for cloud configuration  
+   https://aws.amazon.com/getting-started/
 
-5. ** AWS Amplify:**
+---
+
 ## AWS Amplify Configuration
 
-To enhance Minder with cloud functionalities, we use AWS Amplify. Follow these steps to configure AWS Amplify for the app:
+The project uses **AWS Amplify** to enable cloud capabilities such as authentication and storage.
 
-### Setting Up AWS Amplify
+### Install Amplify CLI
 
-      - **Install the Amplify CLI:**
-         - Ensure you have Node.js installed on your machine. Then, install the AWS Amplify CLI globally using npm:
-         ```bash
-         npm install -g @aws-amplify/cli
-         ```
+Ensure Node.js is installed, then run:
 
-      - **Configure Amplify:**
-         - Run the following command and follow the prompts to configure the CLI with your AWS account:
-         ```bash
-         amplify configure
-         ```
-         - Sign into the AWS Management Console when prompted and complete the configuration steps.
-
-      - **Initialize Amplify in your project:**
-         - Navigate to your project directory and initialize Amplify:
-         ```bash
-         amplify init
-         ```
-         - Answer the questions to specify the name of your environment, your preferred text editor, and other configuration options.
-
-      - **Add Amplify Categories:**
-         - Add any required categories (e.g., auth, api, storage) to your project. For example, to add authentication, you can use:
-         ```bash
-         amplify add auth
-         ```
-         - Follow the prompts to configure each category according to your needs.
-
-      - **Push Changes to the Cloud:**
-         - Apply your changes and deploy your backend to the cloud with:
-         ```bash
-         amplify push
-         ```
-
-Please refer to the [AWS Amplify Documentation](https://docs.amplify.aws/) for more detailed instructions and advanced configurations.
-
-
-## Installation
-
-Follow these steps to set up and run the app:
-
-1. Clone the repository to your local machine:
-
-   ```bash
-   git clone https://github.com/umgc/minder.git
-   cd minder
-   
-   flutter pub get
-
-   flutter run
-
-
-   
-
-## Team Members ✨
-- [@ElsaBushen](https://github.com/ElsaBushen) 
-- [@LensaGemeda](https://github.com/LensaC) 
-- [@JohnnGuyen](https://github.com/Johnnguyen616) 
-- [@GabrielMoreno](https://github.com/MrGESM) 
-- [@SayedShahMahbobi](https://github.com/Mahbobi) 
-- [@KathleenHampton](https://github.com/kbrig573) 
-- [@VinroyJones ](https://github.com/geajonesv) 
-- [@HellenOjwang](https://github.com/Hellenoj) 
-
-
+```bash
+npm install -g @aws-amplify/cli
